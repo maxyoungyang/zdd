@@ -5,6 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import vip.zdd.ums.bean.Member;
+import vip.zdd.ums.bean.MemberReceiveAddress;
 import vip.zdd.ums.service.MemberService;
 
 import java.util.List;
@@ -29,5 +30,11 @@ public class MemberController {
     @ResponseBody
     public List<Member> getAllMember(){
         return memberService.getAllMember();
+    }
+
+    @RequestMapping("member/getMemberReceiveAddressesByMemberId")
+    @ResponseBody
+    public List<MemberReceiveAddress> getMemberReceiveAddressesByMemberId(String memberId){
+        return memberService.getMemberReceiveAddressesByMemberId(Long.parseLong(memberId));
     }
 }
