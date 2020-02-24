@@ -28,7 +28,6 @@ public class MemberController {
     @RequestMapping("member/getAllMember")
     @ResponseBody
     public List<Member> getAllMember(){
-        List<Member> memberList = memberService.getAllMember();
-        return memberList;
+        return memberService.getAllMember();
     }
 }

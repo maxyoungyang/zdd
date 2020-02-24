@@ -20,7 +20,8 @@ public class MemberServiceImpl implements MemberService {
 
     @Override
     public List<Member> getAllMember() {
-        List<Member> memberList = memberMapper.selectAllMember();
+        List<Member> memberList = memberMapper.selectAll();
+//        memberMapper.selectAllMember();
         return memberList;
     }
 }

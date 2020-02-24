@@ -1,9 +1,16 @@
 package vip.zdd.ums.bean;
 
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import java.util.Date;
 
+@Table(name = "ums_member")
 public class Member {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private long memberLevelId;
     private String username;
